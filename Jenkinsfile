@@ -14,7 +14,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          sh 'docker build -t jugalkrishna/flaskapp11 ./front-end'
         }
       }
     }
