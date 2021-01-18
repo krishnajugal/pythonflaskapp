@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git credentialsId: 'github-repo', url: 'https://github.com/krishnajugal/pythonflaskapp.git'
+        git credentialsId: 'github-repo', url: 'https://github.com/krishnajugal/pythonflaskapp'
       }
     }
     stage('Building image') {
