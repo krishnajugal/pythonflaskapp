@@ -1,14 +1,14 @@
 pipeline {
   environment {
-    registry = "pardhagarimella/mykube8"
-    registryCredential = 'dockerhub_id'
+    registry = "jugalkrishna/flaskapp11"
+    registryCredential = 'docker_id'
     dockerImage = ''
   }
   agent any
   stages {
     stage('Cloning Git') {
       steps {
-        git credentialsId: 'github', url: 'https://github.com/pardha997/Rancher-Test'
+        git credentialsId: 'github', url: 'https://github.com/krishnajugal/pythonflaskapp'
       }
     }
     stage('Building image') {
