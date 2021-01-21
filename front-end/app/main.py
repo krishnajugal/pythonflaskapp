@@ -25,6 +25,14 @@ def index():
     elif request.method == "GET":
         return render_template('index.html')
 
+@app.route('/fetch', methods=['GET', 'POST'])
+def fetch():
+    if request.method == "GET":
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM users")
+        result = cur.fetchall()
+        cur.close()
+        return render_template('view.html', data=result)
 
 if __name__ == '__main__':
     app.run()
