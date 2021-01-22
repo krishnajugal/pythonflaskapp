@@ -1,0 +1,15 @@
+<html>
+   <body>
+      <form action = "/fetch" method = "GET">
+         <table>
+         <tr><td>First Name</td><td>Last Name</td></tr>
+           {% for item in data %}
+                <tr>
+                  <td>{{item[1]}}</td>
+                  <td>{{item[2]}}</td>
+                </tr>
+           {% endfor %}
+         </table>
+      </form>
+   </body>
+</html>
